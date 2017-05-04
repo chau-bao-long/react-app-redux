@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
   entry: [
     './src/index.js'
@@ -13,11 +15,17 @@ module.exports = {
       loader: 'babel'
     }]
   },
+  plugins: [
+    new webpack.ResolverPlugin([
+      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+    ], ["normal", "loader"])
+  ],
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: './',
+    inline: true
   }
 };
