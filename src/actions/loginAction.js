@@ -1,6 +1,6 @@
 'use strict'
 
-var keyMirror = require('keyMirror');
+var keyMirror = require('keymirror');
 
 exports.Types = keyMirror({
 	LOGIN_VALIDATE: null,

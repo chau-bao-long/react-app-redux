@@ -1,9 +1,9 @@
 import React from 'react';
 import FormTextField from '../generals/FormTextField';
 import { connect } from 'react-redux';
-import { submit } from './../../actions/LoginAction';
+import { submit } from './../../actions/loginAction';
 
-var Login = React.createClass({
+const Login = React.createClass({
 
 	getInitialState: function() {
 		return {
@@ -76,7 +76,6 @@ var Login = React.createClass({
 			</div>
 		);
 	}
-
 });
 
 function mapStateToProp(state) {

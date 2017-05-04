@@ -9,20 +9,16 @@ import App from './components/app';
 import reducers from './reducers';
 import DevTools from './containers/DevTools';
 
-
-const enhancer = compose(
-  DevTools.instrument()
-);
-
+const enhancer = compose(DevTools.instrument());
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers, enhancer)}>
-  	<Router history={browserHistory}>
-  		<Route path="/" component={App}>
-            <Route path="login" component={Login}></Route>
-            <Route path="books" component={ShowBook}></Route>
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <Route path="login" component={Login}></Route>
+        <Route path="books" component={ShowBook}></Route>
       </Route>
-  	</Router>
+    </Router>
   </Provider>
   , document.getElementById('app'));

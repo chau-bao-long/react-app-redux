@@ -2,15 +2,15 @@ var React = require('react');
 var Nav = require('../navigation/Nav.js');
 
 var Header = React.createClass({
-    getInitialState: function() {
-        return {};
-    },
+  getInitialState: function() {
+    return {};
+  },
 
-    render: function() {
-        return (
-            <Nav /> 
-        );
-    }
+  render: function() {
+    return (
+        <Nav /> 
+    );
+  }
 });
 
 module.exports = Header;

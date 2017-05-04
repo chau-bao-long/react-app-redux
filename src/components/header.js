@@ -35,14 +35,11 @@ class Header extends Component {
 							</li>
 						</ul>
 					</div>
-					
 				</div>
 			</nav>
 		);
 	}
-	
 }
-
 
 function mapStateToProps(state) {
 	return {

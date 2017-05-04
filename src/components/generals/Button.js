@@ -1,7 +1,7 @@
 var React = require('react');
 
 var Button = React.createClass({
-
+	
 	propType: {
 		type: React.PropTypes.string,
 		className: React.PropTypes.string,
@@ -21,7 +21,6 @@ var Button = React.createClass({
 			<button type={this.props.type} className={this.props.className}>{this.props.value}</button>
 		);
 	}
-
 });
 
 module.exports = Button;

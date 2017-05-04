@@ -31,13 +31,12 @@ var FormCheckBox = React.createClass({
 	render: function() {
 		return (
 			<div className={this.props.className}>
-			    <label>
-			      <input type="checkbox" onChange={this._handleChecked} checked={this.state.checked} onChange={this._handleChecked} data-id={this.props.id} /> {this.props.label}
-			    </label>
-		  	</div>
+		    <label>
+		      <input type="checkbox" onChange={this._handleChecked} checked={this.state.checked} onChange={this._handleChecked} data-id={this.props.id} /> {this.props.label}
+		    </label>
+	  	</div>
 		);
 	}
-
 });
 
 module.exports = FormCheckBox;

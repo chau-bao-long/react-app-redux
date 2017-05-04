@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import loadBook from './../actions/bookListAction';
 import showBook from './../actions/bookDetailAction';
 
@@ -10,7 +10,6 @@ var BookList = React.createClass({
 	},
 
 	_showBook: function(book) {
-		debugger
 		this.props.dispatch(showBook(book));
 	},
 

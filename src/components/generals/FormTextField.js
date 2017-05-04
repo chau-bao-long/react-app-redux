@@ -27,7 +27,6 @@ var FormTextField = React.createClass({
 			<input type={this.props.type} value={fieldText} className={this.props.className} onChange={this._handleChange} />
 		);
 	}
-
 });
 
 module.exports = FormTextField;
