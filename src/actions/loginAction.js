@@ -35,4 +35,18 @@ exports.failed = function() {
 	return {
 		type: exports.Types.LOGIN_FAILED
 	};
-}
+};
+
+exports.login = function() {
+	return {
+		type: exports.Types.LOGIN_FAILED
+	};
+};
+
+exports.logOut = function() {
+	return {
+		type: exports.Types.LOGIN_SUCCESS
+	};
+};
+
+

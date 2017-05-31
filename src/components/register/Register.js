@@ -1,11 +1,16 @@
-var React = require('react');
-var FormLabel = require('../generals/FormLabel.js');
-var FormTextField = require('../generals/FormTextField.js');
-var CheckBox = require('../generals/FormCheckBox.js');
-var Button = require('../generals/Button.js');
+import React, { Component } from 'react';
 
-var Register = React.createClass({
-  render: function() {
+import FormLabel from '../generals/FormLabel.js';
+import FormTextField from '../generals/FormTextField.js';
+import CheckBox from '../generals/FormCheckBox.js';
+import Button from '../generals/Button.js';
+
+class Register extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
     return (
       <div>
         <h3>Register Page</h3>
@@ -43,6 +48,6 @@ var Register = React.createClass({
       </div>
     );
   }
-});
+}
 
-module.exports = Register;
+export default Register;

@@ -1,19 +1,25 @@
-import React from 'react';
-import { Component } from 'react';
-import Header from './header';
+import React, { Component } from 'react';
+
+import Header from './header/Header';
 import Login from './login/Login';
 import DevTools from './../containers/DevTools';
 
-export default class App extends Component {
+class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div>
         <Header />
         <div className="container">
-          {this.props.children}
+          { this.props.children }
         </div>
         <DevTools />
       </div>
     )
   }
 }
+
+export default App;

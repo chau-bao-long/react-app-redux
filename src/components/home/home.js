@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Home = React.createClass({
-  render: function() {
+class Home extends Component {
+  render() {
     return (
       <div className="container">
         <div className="jumbotron">
@@ -11,7 +11,6 @@ const Home = React.createClass({
       </div>
     );
   }
-});
+};
 
-module.exports = Home;
-
+export default Home;

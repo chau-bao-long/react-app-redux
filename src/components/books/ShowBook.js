@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import BookList from './bookList';
-import BookDetail from './bookdetail';
 
-export default class ShowBook extends Component {
+import BookList from './BookList';
+import BookDetail from './Bookdetail';
+
+class ShowBook extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div className="row">
@@ -16,3 +21,5 @@ export default class ShowBook extends Component {
     );
   }
 }
+
+export default ShowBook;

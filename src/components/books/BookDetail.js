@@ -1,8 +1,11 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class BookDetail extends Component {
+  constructor(props) {
+    super(props);
+  }
+  
   render() {
     if(!this.props.book) {
       return (

@@ -1,36 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import loadBook from './../actions/bookListAction';
-import showBook from './../actions/bookDetailAction';
 
-var BookList = React.createClass({
+import loadBook from './../../actions/bookListAction';
+import showBook from './../../actions/bookDetailAction';
 
-	componentDidMount: function() {
+class BookList extends Component {
+
+	componentDidMount() {
 		this.props.dispatch(loadBook());
-	},
+	}
 
-	_showBook: function(book) {
+	_showBook() {
 		this.props.dispatch(showBook(book));
-	},
+	}
 
-	_listbook: function() {
+	_listbook() {
 		let that = this;
 		var listBook = this.props.books.map(function(book, key) {
 			return <li className="list-group-item" onClick={() => {that.props.dispatch(showBook(book))}} key={key}>{book.title}</li>
 		});
 
 		return listBook;
-	},
+	}
 
-	render: function() {
+	render() {
 		return (
 			<ul className="list-group">
-				{this._listbook()}
+				{ this._listbook() }
 			</ul>
 		);
 	}
 
-});
+};
 
 function mapStateToProps(state) {
 	return {

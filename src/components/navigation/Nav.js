@@ -1,9 +1,12 @@
-var React = require('react');
-const { Link } = require('react-router');
+import React, { Component } from 'react';
+import { Link } from 'react-router';
 
-var Nav = React.createClass({
+class Nav extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-	render: function() {
+	render() {
 		return (
       <nav className="navbar navbar-default">
         <div className="container">
@@ -14,7 +17,7 @@ var Nav = React.createClass({
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <Link to="/app/dist" className="navbar-brand">PingOne</Link>
+            <Link to="/app/dist" className="navbar-brand">ReactRedux</Link>
           </div>
           <ul className="nav navbar-nav navbar-right">
             <li>
@@ -28,6 +31,6 @@ var Nav = React.createClass({
       </nav>
 		);
 	}
-});
+};
 
-module.exports = Nav;
+export default Nav;
